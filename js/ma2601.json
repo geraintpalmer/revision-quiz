@@ -3,7 +3,7 @@
     {"identifier": "q1",
      "question": "Which of the following are not a requirement for linear programming problems?",
      "image": false,
-     "explanation": "The three requirements for linear programming problems are: <ul><li>The objective function must be linear,</li><li>All decision variables must be non-negative,</li><li>All constrainst must be linear.</li></ul> It is possible to have both ≤ and ≥ constraints.",
+     "explanation": "The three requirements for linear programming problems are: <ul><li>The objective function must be linear,</li><li>All decision variables must be non-negative,</li><li>All constraints must be linear.</li></ul> It is possible to have both ≤ and ≥ constraints.",
      "answers": [
        {"answer_text": "All constraints must be 'less than or equal to' (≤) constrains",
         "answer_status": "correct"},
@@ -11,11 +11,11 @@
         "answer_status": "incorrect"},
        {"answer_text": "All decision variables must be non-negative",
         "answer_status": "incorrect"},
-       {"answer_text": "All constrainst must be linear",
+       {"answer_text": "All constraints must be linear",
         "answer_status": "incorrect"}
     ]},
     {"identifier": "q2",
-     "question": "Consider the solution space below, with the feasible region shaded in grey, and constraints given by black lines. Select which option best decribes the orange point.",
+     "question": "Consider the solution space below, with the feasible region shaded in grey, and constraints given by black lines. Select which option best describes the orange point.",
      "image": "ma2601_q2.jpg",
      "explanation": "The point is feasible as it is within the feasible region, but it is not basic as it does not lie on a vertex of the region.",
      "answers": [
@@ -29,7 +29,7 @@
         "answer_status": "incorrect"}
     ]},
     {"identifier": "q3",
-     "question": "Consider the solution space below, with the feasible region shaded in grey, and constraints given by black lines. Select which option best decribes the orange point.",
+     "question": "Consider the solution space below, with the feasible region shaded in grey, and constraints given by black lines. Select which option best describes the orange point.",
      "image": "ma2601_q3.jpg",
      "explanation": "The point is feasible as it is within the feasible region, but it is not basic as it does not lie on a vertex of the region.",
      "answers": [
@@ -43,7 +43,7 @@
         "answer_status": "incorrect"}
     ]},
     {"identifier": "q4",
-     "question": "Consider the solution space below, with the feasible region shaded in grey, and constraints given by black lines. Select which option best decribes the orange point.",
+     "question": "Consider the solution space below, with the feasible region shaded in grey, and constraints given by black lines. Select which option best describes the orange point.",
      "image": "ma2601_q4.jpg",
      "explanation": "The point is infeasible as it does not lie within the feasible region.",
      "answers": [
@@ -57,7 +57,7 @@
         "answer_status": "incorrect"}
     ]},
     {"identifier": "q5",
-     "question": "Consider the solution space below, with the feasible region shaded in grey, and constraints given by black lines. Select which option best decribes the orange point.",
+     "question": "Consider the solution space below, with the feasible region shaded in grey, and constraints given by black lines. Select which option best describes the orange point.",
      "image": "ma2601_q5.jpg",
      "explanation": "The point is infeasible as it does not lie within the feasible region.",
      "answers": [
@@ -71,7 +71,7 @@
         "answer_status": "incorrect"}
     ]},
     {"identifier": "q6",
-     "question": "Consider the solution space below, with the feasible region shaded in grey, and constraints given by black lines. Select which option best decribes the orange point.",
+     "question": "Consider the solution space below, with the feasible region shaded in grey, and constraints given by black lines. Select which option best describes the orange point.",
      "image": "ma2601_q6.jpg",
      "explanation": "The point is feasible as it is within the feasible region, and it is basic as it lies on a vertex of the region.",
      "answers": [
@@ -237,6 +237,62 @@
         "answer_status": "incorrect"},
        {"answer_text": "A mistake has been made",
         "answer_status": "incorrect"}
+    ]},
+    {"identifier": "q18",
+     "question": "The problem \"Maximise <i>f(x)</i>\" is equivalent to which minimisation problem?",
+     "image": false,
+     "explanation": "Maximising a function is equivalent to minimising the negative of that same function.",
+     "answers": [
+       {"answer_text": "Minimise: <i>-f(x)</i>",
+        "answer_status": "correct"},
+       {"answer_text": "Minimise: <i>f<sup>-1</sup>(x)</i>",
+        "answer_status": "incorrect"},
+       {"answer_text": "Minimise: <i><sup>1</sup>/<sub>f(x)</sub></i>",
+        "answer_status": "incorrect"},
+       {"answer_text": "Minimise: <i>f(-x)</i>",
+        "answer_status": "incorrect"}
+    ]},
+    {"identifier": "q19",
+     "question": "Given a linear programming problem with the following two greater than constraints:<ul><li>X<sub>1</sub> + X<sub>2</sub> ≥ 12</li><li>3X<sub>1</sub> - 4X<sub>2</sub> ≥ 1</li></ul>What would the objective of the first phase of the two phase approach be?",
+     "image": false,
+     "explanation": "The equality constraints would be:<ul><li>X<sub>1</sub> + X<sub>2</sub> - s<sub>1</sub> + a<sub>1</sub> = 12</li><li>3X<sub>1</sub> - 4X<sub>2</sub> - s<sub>2</sub> + a<sub>2</sub>, = 1</li></ul> then the objective is the sum of the artifical variables:<br>a<sub>1</sub> + a<sub>2</sub> = (12 - X<sub>1</sub> - X<sub>2</sub> + s<sub>1</sub>) + (1 - 3X<sub>1</sub> + 4X<sub>2</sub> + s<sub>2</sub>)<br>a<sub>1</sub> + a<sub>2</sub> = 12 - 4X<sub>1</sub> + 3X<sub>2</sub> + s<sub>1</sub> + s<sub>2</sub>.",
+     "answers": [
+       {"answer_text": "Minimise: 12 - 4X<sub>1</sub> + 3X<sub>2</sub> + s<sub>1</sub> + s<sub>2</sub>",
+        "answer_status": "correct"},
+       {"answer_text": "Minimise: 12 - 4X<sub>1</sub> + 3X<sub>2</sub> - s<sub>1</sub> - s<sub>2</sub>",
+        "answer_status": "incorrect"},
+       {"answer_text": "Maximise: 12 - 4X<sub>1</sub> + 3X<sub>2</sub> + s<sub>1</sub> + s<sub>2</sub>",
+        "answer_status": "incorrect"},
+       {"answer_text": "Maximise: 12 - 4X<sub>1</sub> + 3X<sub>2</sub> - s<sub>1</sub> - s<sub>2</sub>",
+        "answer_status": "incorrect"}
+    ]},
+    {"identifier": "q20",
+     "question": "For each equality constraint, what must be added to the Simplex tableau?",
+     "image": false,
+     "explanation": "Equality constraints must hold, so there is no slack. However we need to add an artificial variable in order to have the correct number of basic variables in the initial tableau.",
+     "answers": [
+       {"answer_text": "A positive artificial variable only",
+        "answer_status": "correct"},
+       {"answer_text": "A dummy variable",
+        "answer_status": "incorrect"},
+       {"answer_text": "A positive and a negative slack variable",
+        "answer_status": "incorrect"},
+       {"answer_text": "Slack variables and an artificial variable.",
+        "answer_status": "incorrect"}
+    ]},
+    {"identifier": "q21",
+     "question": "Which of the following software is <i>not</i> a solver?",
+     "image": false,
+     "explanation": "Gurobi and CPLEX are powerful commercial solvers, while PuLP is an open source Python library solver. Excel is spreadsheet software and not a solver.",
+     "answers": [
+       {"answer_text": "Excel",
+        "answer_status": "correct"},
+       {"answer_text": "Gurobi",
+        "answer_status": "incorrect"},
+       {"answer_text": "CPLEX",
+        "answer_status": "incorrect"},
+       {"answer_text": "PuLP.",
+        "answer_status": "incorrect"}
     ]}
-    ]
+  ]
 }
