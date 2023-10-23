@@ -38,7 +38,7 @@ let question_div = `
 if (question.image != false) {
     question_div = question_div + `
 
-<img src="img/${question.image}">
+<img src="../img/${question.image}">
 
 `
 }
