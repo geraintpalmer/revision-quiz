@@ -38,7 +38,7 @@ let question_div = `
 if (question.image != false) {
     question_div = question_div + `
 
-<img src="../../img/${question.image}">
+<img src="revision-quiz/img/${question.image}">
 
 `
 }
@@ -89,7 +89,7 @@ var write_all_questions = function(questions, nqs) {
 
 var create_questions = function(quiz) {
     // Read in data
-    $.getJSON("../js/" + quiz + ".json", function(data) {
+    $.getJSON("revision-quiz/js/" + quiz + ".json", function(data) {
         qdiv = document.getElementById('all_questions')
         qdiv.innerHTML = write_all_questions(data.questions, 10)
     })
