@@ -3,8 +3,9 @@
     {"identifier": "q1",
      "question": "Which of the following are not a requirement for linear programming problems?",
      "image": false,
+     "explanation": "The three requirements for linear programming problems are: <ul><li>The objective function must be linear,</li><li>All decision variables must be non-negative,</li><li>All constrainst must be linear.</li></ul> It is possible to have both ≤ and ≥ constraints.",
      "answers": [
-       {"answer_text": "All constraints must be less than or equal to constrains",
+       {"answer_text": "All constraints must be 'less than or equal to' (≤) constrains",
         "answer_status": "correct"},
        {"answer_text": "The objective function must be linear",
         "answer_status": "incorrect"},
@@ -16,6 +17,7 @@
     {"identifier": "q2",
      "question": "Consider the solution space below, with the feasible region shaded in grey, and constraints given by black lines. Select which option best decribes the orange point.",
      "image": "ma2601_q2.jpg",
+     "explanation": "The point is feasible as it is within the feasible region, but it is not basic as it does not lie on a vertex of the region.",
      "answers": [
        {"answer_text": "Infeasible",
         "answer_status": "incorrect"},
@@ -29,6 +31,7 @@
     {"identifier": "q3",
      "question": "Consider the solution space below, with the feasible region shaded in grey, and constraints given by black lines. Select which option best decribes the orange point.",
      "image": "ma2601_q3.jpg",
+     "explanation": "The point is feasible as it is within the feasible region, but it is not basic as it does not lie on a vertex of the region.",
      "answers": [
        {"answer_text": "Infeasible",
         "answer_status": "incorrect"},
@@ -42,6 +45,7 @@
     {"identifier": "q4",
      "question": "Consider the solution space below, with the feasible region shaded in grey, and constraints given by black lines. Select which option best decribes the orange point.",
      "image": "ma2601_q4.jpg",
+     "explanation": "The point is infeasible as it does not lie within the feasible region.",
      "answers": [
        {"answer_text": "Infeasible",
         "answer_status": "correct"},
@@ -55,6 +59,7 @@
     {"identifier": "q5",
      "question": "Consider the solution space below, with the feasible region shaded in grey, and constraints given by black lines. Select which option best decribes the orange point.",
      "image": "ma2601_q5.jpg",
+     "explanation": "The point is infeasible as it does not lie within the feasible region.",
      "answers": [
        {"answer_text": "Infeasible",
         "answer_status": "correct"},
@@ -68,6 +73,7 @@
     {"identifier": "q6",
      "question": "Consider the solution space below, with the feasible region shaded in grey, and constraints given by black lines. Select which option best decribes the orange point.",
      "image": "ma2601_q6.jpg",
+     "explanation": "The point is feasible as it is within the feasible region, and it is basic as it lies on a vertex of the region.",
      "answers": [
        {"answer_text": "Infeasible",
         "answer_status": "incorrect"},
@@ -81,6 +87,7 @@
     {"identifier": "q7",
      "question": "When does it become too difficult to use the graphical method of solving a linear programming problem?",
      "image": false,
+     "explanation": "We can only draw in two dimensions, and so we can only visualise the solution space when there are 2 decision variables.",
      "answers": [
        {"answer_text": "When there are more than 2 decision variables",
         "answer_status": "correct"},
@@ -94,6 +101,7 @@
     {"identifier": "q8",
      "question": "Which of the following is <i>not</i> necessary when putting a linear programming problem into standard form?",
      "image": false,
+     "explanation": "In standard form we require: <ul><li>All constrains have a constant, non-negative, right hand side,</li><li>All constraints are equalities (need to introduce slack variables),</li><li>All decision variables must be restricted to be non-negative.</li></ul> It can be a minimisation or a maximisation problem.",
      "answers": [
        {"answer_text": "The problem must be to minimise the objective function",
         "answer_status": "correct"},
@@ -107,6 +115,7 @@
     {"identifier": "q9",
      "question": "How would we re-write the following constraint in standard form: X<sub>1</sub> - X<sub>2</sub> ≥ -7",
      "image": false,
+     "explanation": "Begin with: X<sub>1</sub> - X<sub>2</sub> ≥ -7<br>Linearise: X<sub>1</sub> - X<sub>2</sub> - s<sub>1</sub> = -7<br>Multiply by -1: -X<sub>1</sub> + X<sub>2</sub> + s<sub>1</sub> = 7",
      "answers": [
        {"answer_text": "-X<sub>1</sub> + X<sub>2</sub> + s<sub>1</sub> = 7",
         "answer_status": "correct"},
@@ -120,19 +129,21 @@
     {"identifier": "q10",
      "question": "How would we re-write the following constraint in standard form: X<sub>1</sub> ≥ 5X<sub>2</sub> - 2",
      "image": false,
+     "explanation": "Begin with:  X<sub>1</sub> ≥ 5X<sub>2</sub> - 2<br>Rearrange:  X<sub>1</sub> - 5X<sub>2</sub> ≥ - 2<br>Linearise: X<sub>1</sub> - 5X<sub>2</sub> - s<sub>1</sub> = -2<br> Multiply by -1: -X<sub>1</sub> + 5X<sub>2</sub> + s<sub>1</sub> = 2",
      "answers": [
-       {"answer_text": "X<sub>1</sub> - 5X<sub>2</sub> - s<sub>1</sub> = 2",
+       {"answer_text": "-X<sub>1</sub> + 5X<sub>2</sub> + s<sub>1</sub> = 2",
         "answer_status": "correct"},
-       {"answer_text": "X<sub>1</sub> - 5X<sub>2</sub> + s<sub>1</sub> = 2",
+       {"answer_text": "-X<sub>1</sub> + 5X<sub>2</sub> - s<sub>1</sub> = 2",
         "answer_status": "incorrect"},
-       {"answer_text": "X<sub>1</sub> + 5X<sub>2</sub> - s<sub>1</sub> = 2",
+       {"answer_text": "-X<sub>1</sub> - 5X<sub>2</sub> + s<sub>1</sub> = 2",
         "answer_status": "incorrect"},
-       {"answer_text": "X<sub>1</sub> + 5X<sub>2</sub> + s<sub>1</sub> = 2",
+       {"answer_text": "-X<sub>1</sub> - 5X<sub>2</sub> - s<sub>1</sub> = 2",
         "answer_status": "incorrect"}
     ]},
     {"identifier": "q11",
      "question": "Consider the following Simplex tableau. Which variables are considered basic?",
      "image": "ma2601_q11.jpg",
+     "explanation": "Basic variables are those whose column contains one 1 and the rest 0s.",
      "answers": [
        {"answer_text": "X<sub>2</sub>, s<sub>2</sub> and s<sub>3</sub>",
         "answer_status": "correct"},
@@ -146,6 +157,7 @@
     {"identifier": "q12",
      "question": "Consider the following initial Simplex tableau. Which cell would be the next pivot?",
      "image": "ma2601_q12.jpg",
+     "explanation": "We need to choose the work column as that with the most negative value in the objective row (-10). Then we choose the pivot row as the value in that column that produces the smallest positive ration when dividing the LHS with it (10 / 4 = 2.5).",
      "answers": [
        {"answer_text": "Green square (4)",
         "answer_status": "correct"},
@@ -159,6 +171,7 @@
     {"identifier": "q13",
      "question": "In a standard, non-degenerate, linear programming problem with <i>n</i> decision variables and <i>m</i> constraints, how many basic and non-basic variables would we expect?",
      "image": false,
+     "explanation": "A simplex tableau will have <i>m</i> rows and <i>m</i> slack variables, one for each constraint. These begin basic, while the other <i>n</i> variable begin non-basic. At each iteration we convert a non-basic variable into basic, and a basic variable to non-basic, and so the number of basic and non-basic variables are preserved.",
      "answers": [
        {"answer_text": "<i>m</i> basic, <i>n</i> non-basic",
         "answer_status": "correct"},
@@ -167,6 +180,62 @@
        {"answer_text": "<i>m - n</i> basic, <i>n + m</i> non-basic",
         "answer_status": "incorrect"},
        {"answer_text": "<i>m + n</i> basic, <i>n - m</i> non-basic",
+        "answer_status": "incorrect"}
+    ]},
+    {"identifier": "q14",
+     "question": "Consider the following initial Simplex tableau. Which cell would be the next pivot?",
+     "image": "ma2601_q14.jpg",
+     "explanation": "We need to choose the work column as that with the most negative value in the objective row (-2). Then we choose the pivot row as the value in that column that produces the smallest positive ration when dividing the LHS with it (3 / 1 = 3).",
+     "answers": [
+       {"answer_text": "Blue circle (1)",
+        "answer_status": "correct"},
+       {"answer_text": "Orange triangle (3)",
+        "answer_status": "incorrect"},
+       {"answer_text": "Green pentagon (2)",
+        "answer_status": "incorrect"},
+       {"answer_text": "Purple square (0)",
+        "answer_status": "incorrect"}
+    ]},
+    {"identifier": "q15",
+     "question": "What can we say about the following problem if this is the final tableau obtained when using the Simplex algorithm?",
+     "image": "ma2601_q15.jpg",
+     "explanation": "A non-basic variable with a zero in the objective row (X<sub>3</sub>) indicates that there are multiple optimal solutions and that we need to pivot again.",
+     "answers": [
+       {"answer_text": "There are multiple optimal solutions",
+        "answer_status": "correct"},
+       {"answer_text": "It is a degenerate problem",
+        "answer_status": "incorrect"},
+       {"answer_text": "It is infeasible",
+        "answer_status": "incorrect"},
+       {"answer_text": "A mistake has been made",
+        "answer_status": "incorrect"}
+    ]},
+    {"identifier": "q16",
+     "question": "What can we say about the following problem if this is the final tableau obtained when using the Simplex algorithm?",
+     "image": "ma2601_q16.jpg",
+     "explanation": "We see a negative value in the LHS. This indicates a mistake has been made, as a basic variable cannot take on negative values.",
+     "answers": [
+       {"answer_text": "There are multiple optimal solutions",
+        "answer_status": "incorrect"},
+       {"answer_text": "It is a degenerate problem",
+        "answer_status": "incorrect"},
+       {"answer_text": "It is infeasible",
+        "answer_status": "incorrect"},
+       {"answer_text": "A mistake has been made",
+        "answer_status": "correct"}
+    ]},
+    {"identifier": "q17",
+     "question": "What can we say about the following problem if this is the final tableau obtained when using the Simplex algorithm?",
+     "image": "ma2601_q17.jpg",
+     "explanation": "A basic variable is set to zero (X<sub>1</sub>). This defines degeneracy. It means that more than <i>n</i> constraints meet in the same point.",
+     "answers": [
+       {"answer_text": "There are multiple optimal solutions",
+        "answer_status": "incorrect"},
+       {"answer_text": "It is a degenerate problem",
+        "answer_status": "correct"},
+       {"answer_text": "It is infeasible",
+        "answer_status": "incorrect"},
+       {"answer_text": "A mistake has been made",
         "answer_status": "incorrect"}
     ]}
     ]

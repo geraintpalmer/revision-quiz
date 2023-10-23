@@ -45,6 +45,10 @@ if (question.image != false) {
 question_div = question_div + write_question_answers(question.answers, qnum)
 
 question_div = question_div + `
+    <div class='explanation' id='explanation-q${qnum}' style="display: none;">${question.explanation}</div>
+`
+
+question_div = question_div + `
       </div>
       <div class="panel-footer clearfix">
         <div class="panel-footer-left">Score <span class='score'>0</span> / ${nqs}</div>
@@ -105,6 +109,7 @@ var check = function(check_btn) {
     let current_width = progress_bar.style.width;
     let new_width = parseInt(current_width) + 10
     progress_bar.style.width = new_width + '%'
+    document.getElementById('explanation-q' + current_qnum).style.display = 'block'
 
     // Check if correct
     let answer = document.querySelectorAll('input[name="q-' + current_qnum + '"]:checked')[0];
