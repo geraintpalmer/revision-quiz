@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.7.1 -->
+  <title>Revision Quiz</title>
+  <meta name="generator" content="Jekyll v4.0.1" />
+  <meta property="og:title" content="Revision Quiz" />
+  <meta property="og:locale" content="en_US" />
+  <link rel="canonical" href="http://localhost:4000/" />
+  <meta property="og:url" content="http://localhost:4000/" />
+  <meta property="og:site_name" content="Revision Quiz" />
+  <meta name="twitter:card" content="summary" />
+  <meta property="twitter:title" content="Revision Quiz" />
+  <script src="https://unpkg.com/twemoji@latest/dist/twemoji.min.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+<!--   <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script>
+ -->  <script src="/js/main.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="stylesheet" href="/style/style.css">
+</head>
+
+
+<body onload="create_questions('{{ page.quiz }}')">
+<main class="page-content" aria-label="Content">
+<div class="wrapper">
+
+<div class="progress">
+  <div id='progressbar' class="progress-bar" role="progressbar" style="width: 0%;">
+  </div>
+</div>
+
+{% assign num_qs = 10 %}
+{% assign todays_questions = site.data.ma2601 | sample: num_qs %}
+
+<div id="summary" class="well" style="display: none">
+  Your score: final_score / {{ num_qs }}.
+
+  <br><br>
+
+  Please review the questions below.
+</div>
+
+<div id="all_questions"></div>
+
+
+
+</div>
+</body>
+
+</html>
