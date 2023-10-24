@@ -94,7 +94,10 @@ var write_all_questions = function(questions, nqs) {
 var create_questions = function(quiz) {
     // Read in data
     $.getJSON("../js/" + quiz + ".json", function(data) {
-        qdiv = document.getElementById('all_questions')
+        let summary_box = document.getElementById('summary');
+        summary_box.innerHTML = summary_box.innerHTML.replace('quiz-information', data.information)
+        summary_box.innerHTML = summary_box.innerHTML.replace('total_num_qs', data.questions.length)
+        let qdiv = document.getElementById('all_questions')
         qdiv.innerHTML = write_all_questions(data.questions, 10)
     })
 };
