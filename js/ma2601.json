@@ -1,7 +1,7 @@
 {"quiz": "MA2601",
  "information": "Each of these questions look at fundamental concepts from the course, and if they were to appear on an exam, they might correspond to 1 or 2 marks. These are the foundational concepts required in order to begin to solve operational research problems.",
  "questions": [
-    {"identifier": "q1",
+    {"identifier": "q01",
      "question": "Which of the following are not a requirement for linear programming problems?",
      "image": false,
      "explanation": "The three requirements for linear programming problems are: <ul><li>The objective function must be linear,</li><li>All decision variables must be non-negative,</li><li>All constraints must be linear.</li></ul> It is possible to have both ≤ and ≥ constraints.",
@@ -15,7 +15,7 @@
        {"answer_text": "All constraints must be linear",
         "answer_status": "incorrect"}
     ]},
-    {"identifier": "q2",
+    {"identifier": "q02",
      "question": "Consider the solution space below, with the feasible region shaded in grey, and constraints given by black lines. Select which option best describes the orange point.",
      "image": "ma2601_q2.jpg",
      "explanation": "The point is feasible as it is within the feasible region, but it is not basic as it does not lie on a vertex of the region.",
@@ -29,7 +29,7 @@
        {"answer_text": "None of the above",
         "answer_status": "incorrect"}
     ]},
-    {"identifier": "q3",
+    {"identifier": "q03",
      "question": "Consider the solution space below, with the feasible region shaded in grey, and constraints given by black lines. Select which option best describes the orange point.",
      "image": "ma2601_q3.jpg",
      "explanation": "The point is feasible as it is within the feasible region, but it is not basic as it does not lie on a vertex of the region.",
@@ -43,7 +43,7 @@
        {"answer_text": "None of the above",
         "answer_status": "incorrect"}
     ]},
-    {"identifier": "q4",
+    {"identifier": "q04",
      "question": "Consider the solution space below, with the feasible region shaded in grey, and constraints given by black lines. Select which option best describes the orange point.",
      "image": "ma2601_q4.jpg",
      "explanation": "The point is infeasible as it does not lie within the feasible region.",
@@ -57,7 +57,7 @@
        {"answer_text": "None of the above",
         "answer_status": "incorrect"}
     ]},
-    {"identifier": "q5",
+    {"identifier": "q05",
      "question": "Consider the solution space below, with the feasible region shaded in grey, and constraints given by black lines. Select which option best describes the orange point.",
      "image": "ma2601_q5.jpg",
      "explanation": "The point is infeasible as it does not lie within the feasible region.",
@@ -71,7 +71,7 @@
        {"answer_text": "None of the above",
         "answer_status": "incorrect"}
     ]},
-    {"identifier": "q6",
+    {"identifier": "q06",
      "question": "Consider the solution space below, with the feasible region shaded in grey, and constraints given by black lines. Select which option best describes the orange point.",
      "image": "ma2601_q6.jpg",
      "explanation": "The point is feasible as it is within the feasible region, and it is basic as it lies on a vertex of the region.",
@@ -85,7 +85,7 @@
        {"answer_text": "None of the above",
         "answer_status": "incorrect"}
     ]},
-    {"identifier": "q7",
+    {"identifier": "q07",
      "question": "When does it become too difficult to use the graphical method of solving a linear programming problem?",
      "image": false,
      "explanation": "We can only draw in two dimensions, and so we can only visualise the solution space when there are 2 decision variables.",
@@ -99,7 +99,7 @@
        {"answer_text": "When there are 2 parallel constraints",
         "answer_status": "incorrect"}
     ]},
-    {"identifier": "q8",
+    {"identifier": "q08",
      "question": "Which of the following is <i>not</i> necessary when putting a linear programming problem into standard form?",
      "image": false,
      "explanation": "In standard form we require: <ul><li>All constrains have a constant, non-negative, right hand side,</li><li>All constraints are equalities (need to introduce slack variables),</li><li>All decision variables must be restricted to be non-negative.</li></ul> It can be a minimisation or a maximisation problem.",
@@ -113,7 +113,7 @@
        {"answer_text": "All decision variables must be restricted to be non-negative",
         "answer_status": "incorrect"}
     ]},
-    {"identifier": "q9",
+    {"identifier": "q09",
      "question": "How would we re-write the following constraint in standard form: X<sub>1</sub> - X<sub>2</sub> ≥ -7",
      "image": false,
      "explanation": "Begin with: X<sub>1</sub> - X<sub>2</sub> ≥ -7<br>Linearise: X<sub>1</sub> - X<sub>2</sub> - s<sub>1</sub> = -7<br>Multiply by -1: -X<sub>1</sub> + X<sub>2</sub> + s<sub>1</sub> = 7",
@@ -672,6 +672,118 @@
         "answer_status": "incorrect"},
        {"answer_text": "One arrow cannot terminate in more than one location",
         "answer_status": "incorrect"}
-    ]}  
+    ]},
+    {"identifier": "q49",
+     "question": "Consider the activities on arrows diagram below. What is the critical path?",
+     "image": "ma2601_q49.jpg",
+     "explanation": "On an activities on arrows diagram, an event it on a critical path if its earliest start date and latest start date are equal, its earliest end date and latest end date are equal, and the difference between the two are equal to the activity duration.",
+     "answers": [
+       {"answer_text": "A-B-D-G",
+        "answer_status": "correct"},
+       {"answer_text": "A-B-E",
+        "answer_status": "incorrect"},
+       {"answer_text": "A-C-E",
+        "answer_status": "incorrect"},
+       {"answer_text": "A-C-F-H",
+        "answer_status": "incorrect"}
+    ]},
+    {"identifier": "q50",
+     "question": "Consider the activities on arrows diagram below. What is the critical path?",
+     "image": "ma2601_q50.jpg",
+     "explanation": "On an activities on arrows diagram, an event it on a critical path if its earliest start date and latest start date are equal, its earliest end date and latest end date are equal, and the difference between the two are equal to the activity duration.",
+     "answers": [
+       {"answer_text": "A-C-G-H",
+        "answer_status": "correct"},
+       {"answer_text": "A-C-F-G-H",
+        "answer_status": "incorrect"},
+       {"answer_text": "A-C-F-H",
+        "answer_status": "incorrect"},
+       {"answer_text": "A-B-D-G-H",
+        "answer_status": "incorrect"}
+    ]},
+    {"identifier": "q51",
+     "question": "Consider the activities on arrows diagram below, and the table of crash costs. How can we reduce the duration of the project by 1 time unit at least cost?",
+     "image": "ma2601_q51.jpg",
+     "explanation": "There are two critical paths here, A-B-D and C-D. D has reached its crash time and so cannot be reduced any more. Of the others, the unit cost reductions are:<ul><li>A: 15</li><li>B: 10</li><li>C: 30</li></ul>However, A-B and C are on separate, parallel, critical paths, so to reduce the critical path A-B-D we would need to reduce A and B together, giving costs of:<ul><li>A and B: 25</li><li>C: 30</li></ul>And so the cheapest reduction is to reduce A and B together.",
+     "answers": [
+       {"answer_text": "Reduce both A and B by 1 each",
+        "answer_status": "correct"},
+       {"answer_text": "Reduce B by 1",
+        "answer_status": "incorrect"},
+       {"answer_text": "Reduce C by 1",
+        "answer_status": "incorrect"},
+       {"answer_text": "Reduce A by 1",
+        "answer_status": "incorrect"}
+    ]},
+    {"identifier": "q52",
+     "question": "Consider the activities on arrows diagram below, and the table of crash costs. How can we reduce the duration of the project by 1 time unit at least cost?",
+     "image": "ma2601_q52.jpg",
+     "explanation": "There is one critical path here, C-D-E-F. Of these F has reached its crash time and so cannot be reduced any more. Of the others, the unit cost reductions are:<ul><li>C: 5</li><li>D: 6</li><li>E: 8</li></ul>So the cheapest reduction is to reduce C.",
+     "answers": [
+       {"answer_text": "Reduce C",
+        "answer_status": "correct"},
+       {"answer_text": "Reduce D",
+        "answer_status": "incorrect"},
+       {"answer_text": "Reduce E",
+        "answer_status": "incorrect"},
+       {"answer_text": "Reduce B",
+        "answer_status": "incorrect"}
+    ]},
+    {"identifier": "q53",
+     "question": "Consider the activities on arrows diagram below, after a forward and backward pass. The orange circle hides activity D. What is the duration of activity D?",
+     "image": "ma2601_q53.jpg",
+     "explanation": "We can see that activity E is not on the critical path (as 16 - 8 ≠ 1), and so activity D must be on the critical path. Therefore its duration must be equal to the difference between it's latest start date and earliest end date, that is 16 - 8 = 8.",
+     "answers": [
+       {"answer_text": "8",
+        "answer_status": "correct"},
+       {"answer_text": "16",
+        "answer_status": "incorrect"},
+       {"answer_text": "6",
+        "answer_status": "incorrect"},
+       {"answer_text": "10",
+        "answer_status": "incorrect"}
+    ]},
+    {"identifier": "q54",
+     "question": "Consider the Gantt chart of a project below. If activity E was to increase by 2 time units, what would be the effect on the project?",
+     "image": "ma2601_q54.jpg",
+     "explanation": "The critical path is A-B-C, and E is a prerequisite of C. E has a float of 1 time unit (7 - 6), and so if it was as increase by more than that, it would increase the duration of the project.",
+     "answers": [
+       {"answer_text": "The project duration would increase",
+        "answer_status": "correct"},
+       {"answer_text": "The project duration would decrease",
+        "answer_status": "incorrect"},
+       {"answer_text": "There would be no difference to the project duration",
+        "answer_status": "incorrect"},
+       {"answer_text": "There is not enough information",
+        "answer_status": "incorrect"}
+    ]},
+    {"identifier": "q55",
+     "question": "A linear programming problem has the objective: Maximise 4X<sub>1</sub> - X<sub>1</sub>.<br>After using the graphical method to visualise the feasible region, four vertices were found: (0, 0), (1, 5), (<sup>3</sup>/<sub>2</sub>, 2) and (4, 6). What is the optimal solution?",
+     "image": false,
+     "explanation": "Evaluating each in turn gives:<ul><li>f(0, 0) = 0</li><li>f(1, 5) = -1</li><li>f(<sup>3</sup>/<sub>2</sub>, 2) = 4</li><li>f(4, 6) = 10</li></ul> and so the vertex that maximises the objective is (4, 6).",
+     "answers": [
+       {"answer_text": "(4, 6)",
+        "answer_status": "correct"},
+       {"answer_text": "(0, 0)",
+        "answer_status": "incorrect"},
+       {"answer_text": "(1, 5)",
+        "answer_status": "incorrect"},
+       {"answer_text": "(<sup>3</sup>/<sub>2</sub>, 2)",
+        "answer_status": "incorrect"}
+    ]},
+    {"identifier": "q56",
+     "question": "A linear programming problem has the following constraints:<ul><li>-x + 2y ≤ 4</li><li>4x - y ≤ 12</li><li>x + y ≤ 5</li><li>x, y ≥ 0</li></ul>The feasible region has five vertices, four of which are (0, 0), (5, 0), (<sup>17</sup>/<sub>5</sub>, <sup>8</sup>/<sub>5</sub>), and (0, 2). Find the fifth vertex, given in orange below.",
+     "image": "ma2601_q56.jpg",
+     "explanation": "The missing vertex corresponds to the point where the lines x + y = 5 and -x + 2y = 4 intersect, which is the point (2, 3).",
+     "answers": [
+       {"answer_text": "(2, 3)",
+        "answer_status": "correct"},
+       {"answer_text": "(2, 4)",
+        "answer_status": "incorrect"},
+       {"answer_text": "(3, 1)",
+        "answer_status": "incorrect"},
+       {"answer_text": "(3, 2)",
+        "answer_status": "incorrect"}
+    ]}
   ]
 }
