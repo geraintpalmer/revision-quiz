@@ -704,15 +704,15 @@
     {"identifier": "q51",
      "question": "Consider the activities on arrows diagram below, and the table of crash costs. How can we reduce the duration of the project by 1 time unit at least cost?",
      "image": "ma2601_q51.jpg",
-     "explanation": "There are two critical paths here, A-B-D and C-D. D has reached its crash time and so cannot be reduced any more. Of the others, the unit cost reductions are:<ul><li>A: 15</li><li>B: 10</li><li>C: 30</li></ul>However, A-B and C are on separate, parallel, critical paths, so to reduce the critical path A-B-D we would need to reduce A and B together, giving costs of:<ul><li>A and B: 25</li><li>C: 30</li></ul>And so the cheapest reduction is to reduce A and B together.",
+     "explanation": "There are two critical paths here, A-B-D and C-D. D has reached its crash time and so cannot be reduced any more. Of the others, the unit cost reductions are:<ul><li>A: 15</li><li>B: 10</li><li>C: 30</li></ul>However, A-B and C are on separate, parallel, critical paths, so to reduce the critical path A-B-D we would need to reduce A and C together, giving costs of:<ul><li>A and C: 45</li><li>B and C: 40</li></ul>And so the cheapest reduction is to reduce B and C together.",
      "answers": [
-       {"answer_text": "Reduce both A and B by 1 each",
+       {"answer_text": "Reduce both B and C by 1 each",
         "answer_status": "correct"},
        {"answer_text": "Reduce B by 1",
         "answer_status": "incorrect"},
        {"answer_text": "Reduce C by 1",
         "answer_status": "incorrect"},
-       {"answer_text": "Reduce A by 1",
+       {"answer_text": "Reduce both A and C by 1 each",
         "answer_status": "incorrect"}
     ]},
     {"identifier": "q52",
