@@ -1,5 +1,6 @@
 ---
 layout: quiz
 quiz: ma2601
-title: Operational Research - Part II
+title: Operational Research
+language: en
 ---

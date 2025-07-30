@@ -6,7 +6,7 @@
      "image": false,
      "explanation": "The three requirements for linear programming problems are: <ul><li>The objective function must be linear,</li><li>All decision variables must be non-negative,</li><li>All constraints must be linear.</li></ul> It is possible to have both ≤ and ≥ constraints.",
      "answers": [
-       {"answer_text": "All constraints must be 'less than or equal to' (≤) constrains",
+       {"answer_text": "All constraints must be 'less than or equal to' (≤) constraints",
         "answer_status": "correct"},
        {"answer_text": "The objective function must be linear",
         "answer_status": "incorrect"},
@@ -24,7 +24,7 @@
         "answer_status": "incorrect"},
        {"answer_text": "Feasible & Basic",
         "answer_status": "incorrect"},
-       {"answer_text": "Feasible and Non-Basic",
+       {"answer_text": "Feasible & Non-Basic",
         "answer_status": "correct"},
        {"answer_text": "None of the above",
         "answer_status": "incorrect"}
@@ -38,7 +38,7 @@
         "answer_status": "incorrect"},
        {"answer_text": "Feasible & Basic",
         "answer_status": "incorrect"},
-       {"answer_text": "Feasible and Non-Basic",
+       {"answer_text": "Feasible & Non-Basic",
         "answer_status": "correct"},
        {"answer_text": "None of the above",
         "answer_status": "incorrect"}
@@ -52,7 +52,7 @@
         "answer_status": "correct"},
        {"answer_text": "Feasible & Basic",
         "answer_status": "incorrect"},
-       {"answer_text": "Feasible and Non-Basic",
+       {"answer_text": "Feasible & Non-Basic",
         "answer_status": "incorrect"},
        {"answer_text": "None of the above",
         "answer_status": "incorrect"}
@@ -66,7 +66,7 @@
         "answer_status": "correct"},
        {"answer_text": "Feasible & Basic",
         "answer_status": "incorrect"},
-       {"answer_text": "Feasible and Non-Basic",
+       {"answer_text": "Feasible & Non-Basic",
         "answer_status": "incorrect"},
        {"answer_text": "None of the above",
         "answer_status": "incorrect"}
@@ -80,7 +80,7 @@
         "answer_status": "incorrect"},
        {"answer_text": "Feasible & Basic",
         "answer_status": "correct"},
-       {"answer_text": "Feasible and Non-Basic",
+       {"answer_text": "Feasible & Non-Basic",
         "answer_status": "incorrect"},
        {"answer_text": "None of the above",
         "answer_status": "incorrect"}
@@ -102,11 +102,11 @@
     {"identifier": "q08",
      "question": "Which of the following is <i>not</i> necessary when putting a linear programming problem into standard form?",
      "image": false,
-     "explanation": "In standard form we require: <ul><li>All constrains have a constant, non-negative, right hand side,</li><li>All constraints are equalities (need to introduce slack variables),</li><li>All decision variables must be restricted to be non-negative.</li></ul> It can be a minimisation or a maximisation problem.",
+     "explanation": "In standard form we require: <ul><li>All constraints have a constant, non-negative, right hand side,</li><li>All constraints are equalities (need to introduce slack variables),</li><li>All decision variables must be restricted to be non-negative.</li></ul> It can be a minimisation or a maximisation problem.",
      "answers": [
        {"answer_text": "The problem must be to minimise the objective function",
         "answer_status": "correct"},
-       {"answer_text": "All constrains have a constant, non-negative, right hand side",
+       {"answer_text": "All constraints have a constant, non-negative, right hand side",
         "answer_status": "incorrect"},
        {"answer_text": "All constraints are equalities",
         "answer_status": "incorrect"},
@@ -158,7 +158,7 @@
     {"identifier": "q12",
      "question": "Consider the following initial Simplex tableau. Which cell would be the next pivot?",
      "image": "ma2601_q12.jpg",
-     "explanation": "We need to choose the work column as that with the most negative value in the objective row (-10). Then we choose the pivot row as the value in that column that produces the smallest positive ration when dividing the LHS with it (10 / 4 = 2.5).",
+     "explanation": "We need to choose the work column as that with the most negative value in the objective row (-10). Then we choose the pivot row as the value in that column that produces the smallest positive ratio when dividing the LHS with it (10 / 4 = 2.5).",
      "answers": [
        {"answer_text": "Green square (4)",
         "answer_status": "correct"},
@@ -172,7 +172,7 @@
     {"identifier": "q13",
      "question": "In a standard, non-degenerate, linear programming problem with <i>n</i> decision variables and <i>m</i> constraints, how many basic and non-basic variables would we expect?",
      "image": false,
-     "explanation": "A simplex tableau will have <i>m</i> rows and <i>m</i> slack variables, one for each constraint. These begin basic, while the other <i>n</i> variable begin non-basic. At each iteration we convert a non-basic variable into basic, and a basic variable to non-basic, and so the number of basic and non-basic variables are preserved.",
+     "explanation": "A Simplex tableau will have <i>m</i> rows and <i>m</i> slack variables, one for each constraint. These begin basic, while the other <i>n</i> variable begin non-basic. At each iteration we convert a non-basic variable into basic, and a basic variable to non-basic, and so the number of basic and non-basic variables are preserved.",
      "answers": [
        {"answer_text": "<i>m</i> basic, <i>n</i> non-basic",
         "answer_status": "correct"},
@@ -278,7 +278,7 @@
         "answer_status": "incorrect"},
        {"answer_text": "A positive and a negative slack variable",
         "answer_status": "incorrect"},
-       {"answer_text": "Slack variables and an artificial variable.",
+       {"answer_text": "A slack variable and an artificial variable.",
         "answer_status": "incorrect"}
     ]},
     {"identifier": "q21",
@@ -298,7 +298,7 @@
     {"identifier": "q22",
      "question": "In order to carry out <i>minimax</i> or <i>maximin</i> problems, what is required?",
      "image": false,
-     "explanation": "For minimax problems, a dummy variable representing the maximum of a set of variables is required. For maximin a dummy variable representing a minimum of a set of variables is required.",
+     "explanation": "For minimax problems, a dummy variable representing the maximum of a set of variables is required. For maximin problems, a dummy variable representing the minimum of a set of variables is required.",
      "answers": [
        {"answer_text": "Dummy variables",
         "answer_status": "correct"},
@@ -324,7 +324,7 @@
         "answer_status": "incorrect"}
     ]},
     {"identifier": "q24",
-     "question": "Consider the degenerate transportation problem below. The North-West Corner Method was used to find and initial basic solution, and a zero values basic variable should have been denoted. Using the North-West Corner Method, there are two options: one option is cell CX, what other cell would've been chosen?",
+     "question": "Consider the degenerate transportation problem below. The North-West Corner Method was used to find and initial basic solution, and a zero valued basic variable should have been denoted. Using the North-West Corner Method, there are two options: one option is cell CX, what other cell could've been chosen?",
      "image": "ma2601_q24.jpg",
      "explanation": "To find the correct cell, while filling in the cells for the initial assignment, tick off the rows or columns as those constraints are satisfied. When a row and a column are to be ticked off at the same time, only tick one off. At the end there should be one row and one column not ticked. Then the zero valued basic variable is the cell corresponding to the unticked row and unticked column.",
      "answers": [
@@ -354,7 +354,7 @@
     {"identifier": "q26",
      "question": "Consider the transportation problem assignment below. What technique was used to find the solution?",
      "image": "ma2601_q26.jpg",
-     "explanation": "In a problem with <i>n</i> suppliers and <i>m</i> destinations, we expect basic solutions to have <i>m + n - 1</i> (here 3 + 3 - 1 = 5) basic variables, and there are too many (8) here. Therefore this is not a basic solution and was not produces with either method.",
+     "explanation": "In a problem with <i>n</i> suppliers and <i>m</i> destinations, we expect basic solutions to have <i>m + n - 1</i> (here 3 + 3 - 1 = 5) basic variables, and there are too many (8) here. Therefore this is not a basic solution and was not produced with either method.",
      "answers": [
        {"answer_text": "Minimum Cost Method",
         "answer_status": "incorrect"},
@@ -410,7 +410,7 @@
     {"identifier": "q30",
      "question": "Consider the following optimal assignment of a transportation problem below. What values can <i>P</i>, the cost of route BX, take and the assignment remain optimal?",
      "image": "ma2601_q30.jpg",
-     "explanation": "The route associated with increasing BX is: <ul><li>BX→AX→AY→BY: +P - 2 + 2 - 2,</li></ul>corresponding a cost of <i>P - 2</i>. This needs to be greater than 0 for the solution not to require a change, and so P - 2 ≥ 0, thus P ≥ 2.",
+     "explanation": "The route associated with increasing BX is: <ul><li>BX→AX→AY→BY: +P - 2 + 2 - 2,</li></ul>corresponding to a cost of <i>P - 2</i>. This needs to be greater than 0 for the solution not to require a change, and so P - 2 ≥ 0, thus P ≥ 2.",
      "answers": [
        {"answer_text": "P ≥ 2",
         "answer_status": "correct"},
@@ -466,7 +466,7 @@
     {"identifier": "q34",
      "question": "After performing value iteration on a minimisation dynamic programming problem, we obtain the following table. What is the optimal solution?",
      "image": "ma2601_q34.jpg",
-     "explanation": "Value iteration tables are read from the bottom, choosing the path that gives the smallest expected cost (A-D) We then switch to D, and choose the path that gives the smallest path with the expected cost (D-H) Then switch to H and choose the path with the smallest expected cost (H-I). Altogether that gives A-D-H-I.",
+     "explanation": "Value iteration tables are read from the bottom, choosing the path that gives the smallest expected cost (A-D), We then switch to D, and choose the path that gives the smallest expected cost (D-H). Then switch to H and choose the path with the smallest expected cost (H-I). Altogether that gives A-D-H-I.",
      "answers": [
        {"answer_text": "A-D-H-I",
         "answer_status": "correct"},
@@ -494,7 +494,7 @@
     {"identifier": "q36",
      "question": "This is the final tableau obtained when using the Simplex algorithm with non-unique optimal solutions. After another pivot we get the tableau below. What is the set of all possible optimal solutions?",
      "image": "ma2601_q36.jpg",
-     "explanation": "We read off both solutions as (X<sub>1</sub>, X<sub>2</sub>) = (2, 3) and (X<sub>1</sub>, X<sub>2</sub>) = (3.5, 0). All solutions that follow the straight line segment between these are also solutions. Therefore we can parametrise this as {(1 - <i>t</i>)(2, 3) + t(3.5, 0) for all <i>t</i> ∈ [0, 1]}.",
+     "explanation": "We read off both solutions as (X<sub>1</sub>, X<sub>2</sub>) = (2, 3) and (X<sub>1</sub>, X<sub>2</sub>) = (3.5, 0). All solutions that follow the straight line segment between these are also optimal solutions. Therefore we can parametrise this as {(1 - <i>t</i>)(2, 3) + t(3.5, 0) for all <i>t</i> ∈ [0, 1]}.",
      "answers": [
        {"answer_text": "{(1 - <i>t</i>)(2, 3) + <i>t</i>(3.5, 0) for all <i>t</i> ∈ [0, 1]}",
         "answer_status": "correct"},
@@ -506,7 +506,7 @@
         "answer_status": "incorrect"}
     ]},
     {"identifier": "q37",
-     "question": "After obtaining all solutions to a linear programming problem with non-unique solutions, we get that the set of all optimal solutions (X<sub>1</sub>, X<sub>2</sub>) is {(1 - <i>t</i>)(0, 15) + <i>t</i>(5, 40)}. If X<sub>1</sub> is then fixed at X<sub>1</sub>=2, what value must X<sub>2</sub> take for it to be an optimal solution?",
+     "question": "After obtaining all solutions to a linear programming problem with non-unique solutions, we get that the set of all optimal solutions (X<sub>1</sub>, X<sub>2</sub>) as {(1 - <i>t</i>)(0, 15) + <i>t</i>(5, 40) for all <i>t</i> ∈ [0, 1]}. If X<sub>1</sub> is then fixed at X<sub>1</sub>=2, what value must X<sub>2</sub> take for it to be an optimal solution?",
      "image": false,
      "explanation": "As X<sub>1</sub>=5<i>t</i>, then X<sub>1</sub>=2 corresponds to a value <i>t</i>=0.4. Now X<sub>2</sub>=(1 - <i>t</i>)15 + <i>t</i>40, and when <i>t</i>=0.4 that corresponds to X<sub>2</sub>=25.",
      "answers": [
@@ -642,7 +642,7 @@
         "answer_status": "incorrect"},
        {"answer_text": "Bottom left (purple circle)",
         "answer_status": "incorrect"},
-       {"answer_text": "Bottom right (green hexagon)",
+       {"answer_text": "Bottom right (green pentagon)",
         "answer_status": "incorrect"}
     ]},
     {"identifier": "q47",
@@ -650,7 +650,7 @@
      "image": "ma2601_q47.jpg",
      "explanation": "On an acitivies on arrow diagram, each arrow represents a unique activity, while dotted arrows may be used to represent dummy activities. One arrow cannot end in more than one location, arrows cannot begin and end in the same location, and there should only be one start and one end point.",
      "answers": [
-       {"answer_text": "Bottom left (purple hexagon)",
+       {"answer_text": "Bottom left (purple pentagon)",
         "answer_status": "correct"},
        {"answer_text": "Top left (orange circle)",
         "answer_status": "incorrect"},
@@ -668,7 +668,7 @@
         "answer_status": "correct"},
        {"answer_text": "There should be only one start point and one endpoint",
         "answer_status": "incorrect"},
-       {"answer_text": "Two arrows cannot both begin and end in the same locations",
+       {"answer_text": "Two arrows cannot both begin and end in the same locations as eachother",
         "answer_status": "incorrect"},
        {"answer_text": "One arrow cannot terminate in more than one location",
         "answer_status": "incorrect"}
@@ -676,7 +676,7 @@
     {"identifier": "q49",
      "question": "Consider the activities on arrows diagram below. What is the critical path?",
      "image": "ma2601_q49.jpg",
-     "explanation": "On an activities on arrows diagram, an event it on a critical path if its earliest start date and latest start date are equal, its earliest end date and latest end date are equal, and the difference between the two are equal to the activity duration.",
+     "explanation": "On an activities on arrows diagram, an activity it on a critical path if its earliest start date and latest start date are equal, its earliest end date and latest end date are equal, and the difference between the two are equal to the activity duration.",
      "answers": [
        {"answer_text": "A-B-D-G",
         "answer_status": "correct"},
@@ -690,7 +690,7 @@
     {"identifier": "q50",
      "question": "Consider the activities on arrows diagram below. What is the critical path?",
      "image": "ma2601_q50.jpg",
-     "explanation": "On an activities on arrows diagram, an event it on a critical path if its earliest start date and latest start date are equal, its earliest end date and latest end date are equal, and the difference between the two are equal to the activity duration.",
+     "explanation": "On an activities on arrows diagram, an activity it on a critical path if its earliest start date and latest start date are equal, its earliest end date and latest end date are equal, and the difference between the two are equal to the activity duration.",
      "answers": [
        {"answer_text": "A-C-G-H",
         "answer_status": "correct"},
