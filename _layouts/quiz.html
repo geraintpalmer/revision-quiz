@@ -24,7 +24,7 @@
 </head>
 
 
-<body onload="create_questions('{{ page.quiz }}')">
+<body onload="create_questions('{{ page.quiz }}', '{{ page.num_qs }}')">
 <main class="page-content" aria-label="Content">
 <div class="wrapper">
 
@@ -33,8 +33,7 @@
   </div>
 </div>
 
-{% assign num_qs = 10 %}
-{% assign todays_questions = site.data.ma2601 | sample: num_qs %}
+{% assign num_qs = page.num_qs %}
 
 <div id="summary" class="well" style="display: none">
   Your score: final_score / {{ num_qs }}.

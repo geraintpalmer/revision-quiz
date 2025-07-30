@@ -3,4 +3,5 @@ layout: quiz
 quiz: ma2601
 title: Operational Research
 language: en
+num_qs: 3
 ---

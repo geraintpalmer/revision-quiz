@@ -3,4 +3,5 @@ layout: quiz
 quiz: ma2651
 title: Ymchiwl Weithrediadol
 language: cy
+num_qs: 3
 ---

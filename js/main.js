@@ -63,7 +63,7 @@ if (qnum + 1 == nqs) {
 `  
 };
 question_div = question_div + `
-        <button type="button" id="check-button-${qnum}" class="btn btn-default btn-next pull-right" onclick="check(this)" disabled>Check</button>
+        <button type="button" id="check-button-${qnum}" class="btn btn-default btn-next pull-right" onclick="check(this, ${nqs})" disabled>Check</button>
       </div>
   </div>
 </div>
@@ -91,26 +91,27 @@ var write_all_questions = function(questions, nqs) {
     return questions_div;
 };
 
-var create_questions = function(quiz) {
+var create_questions = function(quiz, num_qs) {
     // Read in data
+    console.log(quiz, num_qs)
     $.getJSON("../data/" + quiz + ".json", function(data) {
         let summary_box = document.getElementById('summary');
         summary_box.innerHTML = summary_box.innerHTML.replace('quiz-information', data.information)
         summary_box.innerHTML = summary_box.innerHTML.replace('total_num_qs', data.questions.length)
         let qdiv = document.getElementById('all_questions')
-        qdiv.innerHTML = write_all_questions(data.questions, 10)
+        qdiv.innerHTML = write_all_questions(data.questions, num_qs)
     })
 };
 
 
 
-var check = function(check_btn) {
+var check = function(check_btn, num_qs) {
     let current_qnum = check_btn.id.slice(13);
 
     // Update progress bar
     let progress_bar = document.getElementById('progressbar');
     let current_width = progress_bar.style.width;
-    let new_width = parseInt(current_width) + 10
+    let new_width = parseFloat(current_width) + ((1 / num_qs) * 100)
     progress_bar.style.width = new_width + '%'
     document.getElementById('explanation-q' + current_qnum).style.display = 'block'
 
