@@ -24,7 +24,7 @@
 </head>
 
 
-<body onload="create_questions('{{ page.quiz }}', '{{ page.num_qs }}')">
+<body onload="create_questions('{{ page.quiz }}', '{{ page.num_qs }}', '{{ page.language }}')">
 <main class="page-content" aria-label="Content">
 <div class="wrapper">
 
@@ -36,6 +36,7 @@
 {% assign num_qs = page.num_qs %}
 
 <div id="summary" class="well" style="display: none">
+  {% if page.language == "en" %}
   Your score: final_score / {{ num_qs }}.
 
   <br><br>
@@ -49,6 +50,32 @@
   <br><br>
 
   This quiz was a randomly selected set of {{ num_qs }} questions out of a total collection of total_num_qs questions.
+
+  <a href="/revision-quiz/" class="list-group-item">
+        <span class="quiz" style="font-weight: bold;">Back</span>
+  </a>
+  {% endif %}
+
+  {% if page.language == "cy" %}
+  Eich sgôr: final_score / {{ num_qs }}.
+
+  <br><br>
+
+  Adolygwch y cwestiynau isod.
+
+  <br><br>
+
+  quiz-information
+
+  <br><br>
+
+  Roedd y cwis hwn yn hap-set o {{ num_qs }} cwestiwn allan o gasgliad o total_num_qs o gwestiynau.
+
+  <a href="/revision-quiz/" class="list-group-item">
+        <span class="quiz" style="font-weight: bold;">Nôl</span>
+  </a>
+  {% endif %}
+
 
 </div>
 

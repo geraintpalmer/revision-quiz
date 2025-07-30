@@ -1,4 +1,9 @@
 var score = 0;
+let qtext = {"en": "Question", "cy": "Cwestiwn"}
+let stext = {"en": "Score", "cy": "Sgôr"}
+let ctext = {"en": "Check", "cy": "Gwirio"}
+let ntext = {"en": "Next", "cy": "Nesaf"}
+let ftext = {"en": "Finish", "cy": "Gorffen"}
 
 var write_answer = function(answer, qnum, anum) {
 let answer_div = `
@@ -26,11 +31,11 @@ var write_question_answers = function(answers, qnum) {
     return answers_div;
 };
 
-var write_question = function(question, disp, qnum, nqs) {
+var write_question = function(question, disp, qnum, nqs, lang) {
 let question_div = `
 <div class="question" id="question-${qnum}" style="display: ${disp};">
     <div class="panel panel-default">
-        <div class="panel-heading">Question ${qnum + 1}</div>
+        <div class="panel-heading">${qtext[lang]} ${qnum + 1}</div>
         <div class="panel-body">
           
           <div class='question-text'>${question.question}</div>
@@ -51,19 +56,19 @@ question_div = question_div + `
 question_div = question_div + `
       </div>
       <div class="panel-footer clearfix">
-        <div class="panel-footer-left">Score <span class='score'>0</span> / ${nqs}</div>
+        <div class="panel-footer-left">${stext[lang]} <span class='score'>0</span> / ${nqs}</div>
 `
 if (qnum + 1 == nqs) {
   question_div = question_div + `
-    <button type="button" id="next-button-${qnum}" class="btn btn-default btn-next pull-right" onclick="finish(this)" style="display: none;" disabled>Finish</button>
+    <button type="button" id="next-button-${qnum}" class="btn btn-default btn-next pull-right" onclick="finish(this)" style="display: none;" disabled>${ftext[lang]}</button>
 `
 } else {
   question_div = question_div + `
-    <button type="button" id="next-button-${qnum}" class="btn btn-default btn-next pull-right" onclick="next_question(this)" style="display: none;" disabled>Next</button>
+    <button type="button" id="next-button-${qnum}" class="btn btn-default btn-next pull-right" onclick="next_question(this)" style="display: none;" disabled>${ntext[lang]}</button>
 `  
 };
 question_div = question_div + `
-        <button type="button" id="check-button-${qnum}" class="btn btn-default btn-next pull-right" onclick="check(this, ${nqs})" disabled>Check</button>
+        <button type="button" id="check-button-${qnum}" class="btn btn-default btn-next pull-right" onclick="check(this, ${nqs})" disabled>${ctext[lang]}</button>
       </div>
   </div>
 </div>
@@ -72,7 +77,7 @@ return question_div;
 };
 
 
-var write_all_questions = function(questions, nqs) {
+var write_all_questions = function(questions, nqs, lang) {
     const all_possible_Qs = questions.length
     const numbers = Array.apply(null, {length: all_possible_Qs}).map(Number.call, Number);
     const random_number_array = Array.apply(null, {length: all_possible_Qs}).map(Function.call, Math.random);
@@ -86,12 +91,12 @@ var write_all_questions = function(questions, nqs) {
         } else {
             disp = 'none';
         };
-        questions_div = questions_div + write_question(questions[j], disp, i, nqs)
+        questions_div = questions_div + write_question(questions[j], disp, i, nqs, lang)
     };
     return questions_div;
 };
 
-var create_questions = function(quiz, num_qs) {
+var create_questions = function(quiz, num_qs, lang) {
     // Read in data
     console.log(quiz, num_qs)
     $.getJSON("../data/" + quiz + ".json", function(data) {
@@ -99,7 +104,7 @@ var create_questions = function(quiz, num_qs) {
         summary_box.innerHTML = summary_box.innerHTML.replace('quiz-information', data.information)
         summary_box.innerHTML = summary_box.innerHTML.replace('total_num_qs', data.questions.length)
         let qdiv = document.getElementById('all_questions')
-        qdiv.innerHTML = write_all_questions(data.questions, num_qs)
+        qdiv.innerHTML = write_all_questions(data.questions, num_qs, lang)
     })
 };
 
