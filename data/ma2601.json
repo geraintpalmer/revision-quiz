@@ -1,5 +1,5 @@
 {"quiz": "MA2601",
- "information": "Each of these questions look at fundamental concepts from the course, and if they were to appear on an exam, they might correspond to 1 or 2 marks. These are the foundational concepts required in order to begin to solve operational research problems.",
+ "information": "Each of these questions look at fundamental concepts from the course. These are the foundational concepts required in order to begin, and continue to, solve operational research problems.",
  "questions": [
     {"identifier": "q01",
      "question": "Which of the following are not a requirement for linear programming problems?",
